@@ -9,7 +9,7 @@ export default function App() {
 
 return (
     <NativeBaseProvider>
-      
+      {!loaded? <Loading/> : <Signin/>}
     </NativeBaseProvider>
   );
 }
