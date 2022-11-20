@@ -49,5 +49,9 @@ export function AuthContextProvider({children}) {
         console.log('TOKEN DE AUTENTICAÇÃO ====>', accessToken);
     }
 
+    useEffect(() => {
+        if(response?.type === 'success' && response.authentication?.accessToken)
+            signInWithGoogle(response.authentication.accessToken);
+    }, [response]);
 
 }
