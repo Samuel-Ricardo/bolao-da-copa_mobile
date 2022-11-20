@@ -9,3 +9,10 @@ interface UserProps {
     name: string;
     avatarUrl: string;
 }
+
+export interface AuthContextDataProps{
+    user: UserProps;
+    signIn: () => Promise<void>;
+    isUserLoading: boolean;
+}
+
