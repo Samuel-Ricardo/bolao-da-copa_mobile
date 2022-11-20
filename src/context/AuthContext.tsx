@@ -22,3 +22,6 @@ interface AuthProviderProps {
 
 export const AuthContext = createContext({} as AuthContextDataProps);
 
+export function AuthContextProvider({children}) {
+   
+}
