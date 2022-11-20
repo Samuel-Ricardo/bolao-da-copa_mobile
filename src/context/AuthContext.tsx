@@ -19,3 +19,6 @@ export interface AuthContextDataProps{
 interface AuthProviderProps {
     children: ReactNode;
 }
+
+export const AuthContext = createContext({} as AuthContextDataProps);
+
