@@ -31,4 +31,18 @@ export function AuthContextProvider({children}) {
         scopes: ['profile', 'email']
     });
 
+    async function signIn() {
+        try {
+            setIsUserloading(true)
+            await promptAsync();
+            
+        } catch(err) {
+            console.error(err);
+            throw err;
+        } finally {
+            setIsUserloading(false);
+        }
+    }
+
+
 }
