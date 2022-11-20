@@ -54,4 +54,13 @@ export function AuthContextProvider({children}) {
             signInWithGoogle(response.authentication.accessToken);
     }, [response]);
 
+    return (
+        <AuthContext.Provider value={{
+            signIn,
+            isUserLoading,
+            user
+        }}>
+            {children}
+        </AuthContext.Provider>
+    )
 }
