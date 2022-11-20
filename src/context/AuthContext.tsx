@@ -16,3 +16,6 @@ export interface AuthContextDataProps{
     isUserLoading: boolean;
 }
 
+interface AuthProviderProps {
+    children: ReactNode;
+}
