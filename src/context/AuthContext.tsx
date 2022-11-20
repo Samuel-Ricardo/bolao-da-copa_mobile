@@ -2,6 +2,7 @@ import { createContext, ReactNode, useEffect, useState } from 'react';
 import * as WebBrowser from 'expo-web-browser'
 import * as Google from 'expo-auth-session/providers/google'
 import * as AuthSessions from 'expo-auth-session'
+import { Signin } from '../screens/Signin';
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -42,6 +43,10 @@ export function AuthContextProvider({children}) {
         } finally {
             setIsUserloading(false);
         }
+    }
+
+    async function signInWithGoogle(accessToken: string) {
+        console.log('TOKEN DE AUTENTICAÇÃO ====>', accessToken);
     }
 
 
