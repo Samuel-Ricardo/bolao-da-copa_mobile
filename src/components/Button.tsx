@@ -7,7 +7,17 @@ interface IProps extends IButtonProps {
 
 export function Button({title, type='PRIMARY', ...rest}: IProps) {
     return (
-        <ButtonNativeBase>
+        <ButtonNativeBase
+            bg={type === 'PRIMARY' ? 'yellow.500' : 'red.500'}
+            w="full"
+            h={14}
+            rounded="sm"
+            fontSize="md"
+            textTransform="uppercase"
+            _pressed={{bg: type === 'PRIMARY' ? 'yellow.400' : 'red.400'}}
+            _loading={{_spinner: {color: 'black'}}}
+            {...rest}
+        >
             {title}
         </ButtonNativeBase>
     )
