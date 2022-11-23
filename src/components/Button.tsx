@@ -18,7 +18,13 @@ export function Button({title, type='PRIMARY', ...rest}: IProps) {
             _loading={{_spinner: {color: 'black'}}}
             {...rest}
         >
-            {title}
+            <Text
+                fontSize="sm"
+                fontFamily="heading"
+                color={type === 'PRIMARY' ? 'black' : 'white'}
+            >
+                {title}
+            </Text>
         </ButtonNativeBase>
     )
 }
