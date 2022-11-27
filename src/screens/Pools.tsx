@@ -1,5 +1,5 @@
 import { Icon, VStack } from "native-base";
-import { Header } from "../components";
+import { Button, Header } from "../components";
 import {Octicons} from '@expo/vector-icons'
 
 export const Pools = _ => (
