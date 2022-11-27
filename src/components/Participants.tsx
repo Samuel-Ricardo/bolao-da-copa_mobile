@@ -5,3 +5,8 @@ export interface IParticipantsProps{
         avatarUrl: string;
     };
 };
+
+interface IProps {
+    participants: IParticipantsProps[];
+    count: number;
+}
