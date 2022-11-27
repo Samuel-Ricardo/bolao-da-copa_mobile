@@ -12,7 +12,7 @@ interface IGuessProps {
     secondTeamPoints: number;
 }
 
-interface IGameProps {
+export interface IGameProps {
     id: string;
     firstTeamCountryCode: string;
     secondTeamCountryCode: string;
