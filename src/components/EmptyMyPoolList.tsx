@@ -1,0 +1,5 @@
+
+interface IProps {
+    code: string;
+}
+
