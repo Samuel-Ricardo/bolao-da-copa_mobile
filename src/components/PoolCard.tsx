@@ -1,6 +1,7 @@
+import { TouchableOpacityProps } from "react-native";
 import { IParticipantsProps } from "./Participants";
 
-export interface IPoolsPros {
+export interface IPoolProps {
     id: string;
     code: string;
     title: string;
@@ -13,4 +14,8 @@ export interface IPoolsPros {
     _count: {
         participants: number;
     }
+}
+
+interface IProps extends TouchableOpacityProps {
+    data: IPoolProps;
 }
