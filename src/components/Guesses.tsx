@@ -63,5 +63,25 @@ export function Guesses(poolId: string) {
         }
     }
 
+    useEffect(() => {
+        fetchGames();
+    }, []);
 
+    if(isLoading) return <Loading/>
+
+    return (
+        <FlatList 
+            data={games}
+            keyExtractor={item => item.id}
+            renderItem={({item}) => (
+                <Game
+                    data={item}
+                    setFirstTeamPoints={setFirstTeamPoints}
+                    setSecondTeamPoints={setSecondTeamPoints}
+                    onGuessConfirm={() => handleGuessConfirm(item.id)}
+                />
+            )}
+            _contentContainerStyle={{pb:10}}
+        />
+    )
 }
