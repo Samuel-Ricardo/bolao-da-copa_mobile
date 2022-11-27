@@ -13,3 +13,11 @@ interface IGameProps {
     secondTeamCountryCode: string;
     guess: null | IGuessProps;
 }
+
+interface IProps {
+data: IGameProps;
+onGuessConfirm: () => void;
+setFirstTeamPoints: (value: string) => void;
+setSecondTeamPoints: (value: string) => void;
+}
+
