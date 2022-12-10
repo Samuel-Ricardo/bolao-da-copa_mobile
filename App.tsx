@@ -1,24 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useFonts, Roboto_400Regular, Roboto_500Medium, Roboto_700Bold } from "@expo-google-fonts/roboto";
+import { NativeBaseProvider, StatusBar } from 'native-base';
+import { Loading } from './src/components/Loading';
+import { AuthContextProvider } from "./src/context/AuthContext";
+import { Pools, Signin } from "./src/screens";
+import { THEME } from "./src/styles/theme";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Hello World :D!</Text>
-      <StatusBar style="auto" />
-    </View>
+
+  const [loaded] = useFonts({Roboto_400Regular, Roboto_500Medium, Roboto_700Bold})
+
+return (
+    <NativeBaseProvider theme={THEME}>
+      <AuthContextProvider>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="transparent"
+          translucent
+        />
+
+        {loaded? <Pools/> : <Loading/>}
+      </AuthContextProvider>
+    </NativeBaseProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#000',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    color: '#FFF',
-    fontSize: 24
-  }
-});
