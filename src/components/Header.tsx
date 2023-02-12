@@ -1,6 +1,5 @@
 import { Box, HStack, Text } from "native-base";
-import { CaretLeft } from "phosphor-react-native";
-import Export from "phosphor-react-native/lib/typescript/icons/Export";
+import { CaretLeft, Export } from "phosphor-react-native";
 import { ButtonIcon } from './ButtonIcon';
 
 interface IProps {
@@ -13,7 +12,7 @@ export function Header({ title, showBackButton, showShareButton}: IProps){
     const EmptyBoxSpace  = () => (<Box w={6} h={6}/>)
 
     return (
-        <HStack w="full" bgColor="gray.800" alignItems="flex-center" pb={5} px={5}>
+        <HStack w="full" bgColor="gray.800" alignItems="center" pb={5} px={5}>
             <HStack w="full" alignItems="center" justifyContent="space-between">
                 {
                     showBackButton ? <ButtonIcon icon={CaretLeft}/>
