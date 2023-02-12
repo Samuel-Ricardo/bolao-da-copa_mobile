@@ -2,7 +2,8 @@ import { createContext, ReactNode, useEffect, useState } from 'react';
 import * as WebBrowser from 'expo-web-browser'
 import * as Google from 'expo-auth-session/providers/google'
 import * as AuthSessions from 'expo-auth-session'
-import { Signin } from '../screens/Signin';
+import {GOOGLE_CLIENT_ID} from '@env'
+
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -27,10 +28,12 @@ export function AuthContextProvider({children}) {
     const [isUserLoading, setIsUserloading] = useState(false);
     const [user, setUser] = useState<UserProps>({} as UserProps);
     const [request, response, promptAsync] = Google.useAuthRequest({
-        clientId: "",
+        clientId: GOOGLE_CLIENT_ID,
         redirectUri: AuthSessions.makeRedirectUri({useProxy: true}),
         scopes: ['profile', 'email']
     });
+
+    
 
     async function signIn() {
         try {
@@ -50,8 +53,9 @@ export function AuthContextProvider({children}) {
     }
 
     useEffect(() => {
-        if(response?.type === 'success' && response.authentication?.accessToken)
+        if(response?.type === 'success' && response.authentication?.accessToken){
             signInWithGoogle(response.authentication.accessToken);
+        }
     }, [response]);
 
     return (
