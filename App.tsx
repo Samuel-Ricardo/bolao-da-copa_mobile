@@ -18,7 +18,7 @@ return (
           translucent
         />
 
-        {loaded? <Pools/> : <Loading/>}
+        {loaded? <Signin/> : <Loading/>}
       </AuthContextProvider>
     </NativeBaseProvider>
   );
