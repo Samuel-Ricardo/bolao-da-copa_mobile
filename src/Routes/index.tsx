@@ -9,7 +9,7 @@ export function Routes() {
     const { user } = useAuth();
 
     return (
-        <Box>
+        <Box flex={1} bgColor='gray.900'>
             <NavigationContainer>
                 {user.name ? <AppRoutes/> : <Signin/>}
             </NavigationContainer>
