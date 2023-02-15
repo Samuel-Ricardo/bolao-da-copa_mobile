@@ -19,7 +19,7 @@ export function Header({ title, showBackButton, showShareButton}: IProps){
         <HStack w="full" bgColor="gray.800" alignItems="center" pb={5} px={5}>
             <HStack w="full" alignItems="center" justifyContent="space-between">
                 {
-                    showBackButton ? <ButtonIcon icon={CaretLeft} onPress={() => navigate(SCREENS.POOLS)}/>
+                    showBackButton ? <ButtonIcon icon={CaretLeft} onPress={() => navigate(SCREENS.POOLS as never)}/>
                     : <EmptyBoxSpace/>
                 }
 
