@@ -28,7 +28,14 @@ export function AppRoutes() {
                 top: Platform.OS === 'android' ? -10 : 0
             }
         }}>
-           
+            <Screen name={SCREENS.NEW}
+                component={New}
+                options={{
+                    tabBarIcon: ({ color }) => <PlusCircle color={color} size={size}/>,
+                    tabBarLabel: "Novo Bolão :D"
+                }}
+            />
+
         </Navigator>
     )
 }
