@@ -42,7 +42,10 @@ export function AppRoutes() {
                     tabBarLabel: "Meus Bolões :D"
                 }}
             />
-
+            <Screen name={SCREENS.FIND}
+                component={Find}
+                options={{tabBarButton: null}}
+            />
         </Navigator>
     )
 }
