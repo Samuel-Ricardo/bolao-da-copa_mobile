@@ -2,8 +2,8 @@ import { useFonts, Roboto_400Regular, Roboto_500Medium, Roboto_700Bold } from "@
 import { NativeBaseProvider, StatusBar } from 'native-base';
 import { Loading } from './src/components/Loading';
 import { AuthContextProvider } from "./src/context/AuthContext";
-import { Pools, Signin } from "./src/screens";
 import { THEME } from "./src/styles/theme";
+import { Routes } from "./src/Routes";
 
 export default function App() {
 
@@ -18,7 +18,7 @@ return (
           translucent
         />
 
-        {loaded? <Signin/> : <Loading/>}
+        {loaded? <Routes/> : <Loading/>}
       </AuthContextProvider>
     </NativeBaseProvider>
   );
