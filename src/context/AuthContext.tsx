@@ -3,6 +3,7 @@ import * as WebBrowser from 'expo-web-browser'
 import * as Google from 'expo-auth-session/providers/google'
 import * as AuthSessions from 'expo-auth-session'
 import {GOOGLE_CLIENT_ID} from '@env'
+import { api } from '../server/api';
 
 
 WebBrowser.maybeCompleteAuthSession();
@@ -48,8 +49,20 @@ export function AuthContextProvider({children}) {
         }
     }
 
-    async function signInWithGoogle(accessToken: string) {
-        console.log('TOKEN DE AUTENTICAÇÃO ====>', accessToken);
+    async function signInWithGoogle(access_token: string) {
+        console.log('TOKEN DE AUTENTICAÇÃO ====>', access_token);
+
+        try { setIsUserloading(true)
+            
+            const token = (await api.post('/users', {access_token})).data.token;
+
+            api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
+            setUser((await api.get(`/me`)).data);
+        
+        }
+         catch(err) { throw err }
+         finally{ setIsUserloading(false) }
     }
 
     useEffect(() => {
