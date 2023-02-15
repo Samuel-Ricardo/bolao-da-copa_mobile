@@ -35,6 +35,13 @@ export function AppRoutes() {
                     tabBarLabel: "Novo Bolão :D"
                 }}
             />
+            <Screen name={SCREENS.POOLS}
+                component={Pools}
+                options={{
+                    tabBarIcon: ({ color }) => <SoccerBall color={color} size={size}/>,
+                    tabBarLabel: "Meus Bolões :D"
+                }}
+            />
 
         </Navigator>
     )
