@@ -1,5 +1,5 @@
 import { Share } from "react-native";
 
-async function handleCodeShare(code: string) {
+export async function handleCodeShare(code: string) {
     await Share.share({ message: code })
 }

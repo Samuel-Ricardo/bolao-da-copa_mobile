@@ -1,17 +1,20 @@
 import { Pressable, Row, Text } from "native-base";
+import { handleCodeShare } from '../utils'
+
 
 interface IProps {
     code: string;
 }
 
 export function EmptyMyPoolList({code}:IProps){
+
   return (
     	<Row flexWrap="wrap" justifyContent="center" p={4}>
 				<text color="gray.200" fontSize="sm">
 					Esse bolão ainda não tem participantes, que tal
 				</text>
 
-				<Pressable onPress={() => {}}>
+				<Pressable onPress={() => handleCodeShare(code)}>
 					<Text  textDecorationLine="underline" color="yellow.500" textDecoration="underline">
 						Compartilhar o Código
 					</Text>
