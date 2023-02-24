@@ -24,9 +24,15 @@ export function Details () {
         const response = (await api.get(`/pools/${id}`)).data
         setPoolDetails(response.pool);
       }
-    catch
+    catch (error)
       {
-
+        console.log(error)
+        
+        toast.show({
+          title: "Não foi possível carregaro os dados do bolão :/",
+          placement: 'top',
+          bgColor: 'red.500'
+        })
       }
     finally { setIsLoading(false) }
 
