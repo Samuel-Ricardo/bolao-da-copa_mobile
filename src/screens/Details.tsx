@@ -1,7 +1,15 @@
 import { useRoute } from "@react-navigation/native";
 import { HStack, useToast, VStack } from "native-base";
 import { useEffect, useState } from "react";
-import { Header, IPoolCardProps, Loading, Options, PoolHeader } from "../components";
+import { 
+  EmptyMyPoolList, 
+  Guesses, 
+  Header, 
+  IPoolCardProps, 
+  Loading, 
+  Options, 
+  PoolHeader 
+} from "../components";
 import { api } from "../server/api";
 import { handleCodeShare } from "../utils";
 
@@ -73,11 +81,11 @@ export function Details () {
             />
           </HStack>
 
-
+          <Guesses poolId={poolDetails.id} code = {poolDetails.code} />
         </VStack>
 
+      : <EmptyMyPoolList code = {poolDetails.code}/>
       }
-
     </VStack>
   )
 }
