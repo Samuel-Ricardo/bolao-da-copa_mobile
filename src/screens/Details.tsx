@@ -1,0 +1,2 @@
+
+interface IRouteParams { id: string }
