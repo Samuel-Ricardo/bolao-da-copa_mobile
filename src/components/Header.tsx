@@ -8,9 +8,16 @@ interface IProps {
     title: string;
     showBackButton?: boolean;
     showShareButton?: boolean;
+    onShare: () => void;
 }
 
-export function Header({ title, showBackButton, showShareButton}: IProps){
+export function Header(
+  { 
+    title, 
+    showBackButton, 
+    showShareButton,
+    onShare
+  }: IProps){
 
     const {navigate} = useNavigation();
     const EmptyBoxSpace  = () => (<Box w={6} h={6}/>)
@@ -28,7 +35,7 @@ export function Header({ title, showBackButton, showShareButton}: IProps){
                 </Text>
             
                 {
-                    showShareButton? <ButtonIcon icon={Export}/>
+                    showShareButton? <ButtonIcon icon={Export} onPress={onShare}/>
                     : <EmptyBoxSpace/> 
                 }
             </HStack>
