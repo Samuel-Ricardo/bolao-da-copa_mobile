@@ -1,8 +1,9 @@
 import { useRoute } from "@react-navigation/native";
 import { useToast, VStack } from "native-base";
 import { useEffect, useState } from "react";
-import { IPoolCardProps, Loading } from "../components";
+import { Header, IPoolCardProps, Loading } from "../components";
 import { api } from "../server/api";
+import { handleCodeShare } from "../utils";
 
 interface IRouteParams { id: string }
 
@@ -43,8 +44,15 @@ export function Details () {
   if (isLoading) return <Loading/>
  
   return (
-    <VStack>
-      
+    <VStack flex={1} bgColor="gray.900">
+      <Header 
+        title={poolDetails.title}
+        showBackButton
+        showShareButton
+        onShare={() => handleCodeShare(poolDetails.code)}
+      />
+
+
     </VStack>
   )
 }
