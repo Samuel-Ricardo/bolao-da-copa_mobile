@@ -1,7 +1,7 @@
 import { useRoute } from "@react-navigation/native";
-import { useToast, VStack } from "native-base";
+import { HStack, useToast, VStack } from "native-base";
 import { useEffect, useState } from "react";
-import { Header, IPoolCardProps, Loading } from "../components";
+import { Header, IPoolCardProps, Loading, Options, PoolHeader } from "../components";
 import { api } from "../server/api";
 import { handleCodeShare } from "../utils";
 
@@ -9,6 +9,8 @@ interface IRouteParams { id: string }
 
 export function Details () {
  
+  const [optionSelected, setOptionSelected] = useState<'guesses' | 'ranking'>('guesses')
+
   const [isLoading, setIsLoading] = useState(true)
   const [poolDetails, setPoolDetails] = useState<IPoolCardProps>({} as IPoolCardProps)
 
@@ -52,6 +54,29 @@ export function Details () {
         onShare={() => handleCodeShare(poolDetails.code)}
       />
 
+    
+      { poolDetails._count?.participants > 0 ?
+
+        <VStack px={5} flex={1}>
+          <PoolHeader data={poolDetails} />
+        
+          <HStack bgColor="gray.900" p={1} rounded="sm" mb={8}>
+            <Options
+              title = 'Seus Palpites'
+              isSelected = {optionSelected === 'guesses'}
+              onPress = { () => setOptionSelected('guesses') }
+            />
+            <Options
+              title = 'Ranking do Grupo'
+              isSelected = {optionSelected === 'ranking'}
+              onPress = { () => setOptionSelected('ranking') }
+            />
+          </HStack>
+
+
+        </VStack>
+
+      }
 
     </VStack>
   )
