@@ -1,7 +1,7 @@
 import { useRoute } from "@react-navigation/native";
 import { useToast, VStack } from "native-base";
-import { useState } from "react";
-import { IPoolCardProps } from "../components";
+import { useEffect, useState } from "react";
+import { IPoolCardProps, Loading } from "../components";
 import { api } from "../server/api";
 
 interface IRouteParams { id: string }
@@ -38,9 +38,13 @@ export function Details () {
 
   }
 
+  useEffect(() => { fetchPoolDetails() }, [id])
+
+  if (isLoading) return <Loading/>
+ 
   return (
     <VStack>
-
+      
     </VStack>
   )
 }
