@@ -2,7 +2,7 @@ import { Heading, HStack, Text, VStack } from "native-base";
 import { TouchableOpacity, TouchableOpacityProps } from "react-native";
 import { IParticipantsProps, Participants } from "./Participants";
 
-export interface IPoolProps {
+export interface IPoolCardProps {
     id: string;
     code: string;
     title: string;
@@ -18,7 +18,7 @@ export interface IPoolProps {
 }
 
 interface IProps extends TouchableOpacityProps {
-    data: IPoolProps;
+    data: IPoolCardProps;
 }
 
 export function PoolCard({ data, ...rest }: IProps) {
