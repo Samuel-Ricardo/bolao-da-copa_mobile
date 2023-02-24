@@ -1,10 +1,17 @@
 import { FlatList, useToast } from 'native-base';
 import { useState, useEffect } from 'react';
 import { api } from '../server/api';
+import { EmptyMyPoolList } from './EmptyMyPoolList';
 import { Game, IGameProps } from './Game';
 import { Loading } from './Loading';
 
-export function Guesses(poolId: string) {
+interface Props {
+  poolId: string;
+  code: string;
+}
+
+export function Guesses({poolId, code}: Props) {
+
     const [isLoading, setIsLoading] = useState(true)
     const [games, setGames] = useState<IGameProps[]>([])
     const [firstTeamPoints, setFirstTeamPoints] = useState('')
@@ -32,7 +39,7 @@ export function Guesses(poolId: string) {
 
     async function handleGuessConfirm(gameId: string) {
         try {
-            if(!firstTeamPoints || !secondTeamPoints) {
+            if(!firstTeamPoints.trim() || !secondTeamPoints.trim()) {
                 return toast.show({
                     title: 'Informe o placar para palpitar',
                     placement: 'top',
@@ -46,7 +53,7 @@ export function Guesses(poolId: string) {
             });
 
             toast.show({
-                title: "Palpite realizado com sucesso",
+                title: "Palpite realizado com sucesso!",
                 placement: 'top',
                 bgColor: 'green.500'
             });
@@ -82,6 +89,7 @@ export function Guesses(poolId: string) {
                 />
             )}
             _contentContainerStyle={{pb:10}}
+            ListEmptyComponent={() => <EmptyMyPoolList  code={code}/>}
         />
     )
 }
