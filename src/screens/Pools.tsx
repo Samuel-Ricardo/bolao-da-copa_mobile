@@ -4,7 +4,16 @@ import {Octicons} from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native';
 import { SCREENS } from "../config";
 
-export const Pools = _ => (
+export const Pools = () => {
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [pools, setPools] = useState<PoolCardPros[]>([])
+
+  const { navigate } = useNavigation();
+  const toast = useToast();
+
+
+  return (
     <VStack flex={1} bgColor="gray.900">
         <Header title="MEUS BOLÕES"/>
         <VStack  mt={6} mx={5} borderBottomWidth={1} borderBottomColor="gray.600" pb={4} mb={4}>
@@ -15,4 +24,4 @@ export const Pools = _ => (
             />
         </VStack>
     </VStack>
-)
+  )
