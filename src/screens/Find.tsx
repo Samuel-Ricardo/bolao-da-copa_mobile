@@ -1,7 +1,16 @@
-import { Heading, VStack } from "native-base";
+import { useNavigation } from "@react-navigation/native";
+import { Heading, useToast, VStack } from "native-base";
+import { useState } from "react";
 import { Button, Header, Input } from "../components";
 
 export function Find() {
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [code, setCode] = useState('');
+
+  const toast = useToast();
+  const { navigate } = useNavigation();
+
     return (
         <VStack flex={1} bg="gray.900">
             <Header title="Buscar por código" showBackButton/>
