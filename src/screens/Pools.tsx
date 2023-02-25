@@ -1,16 +1,41 @@
-import { Icon, VStack } from "native-base";
-import { Button, Header } from "../components";
+import { Icon, VStack, useToast } from "native-base";
+import { Button, Header, IPoolCardProps } from "../components";
 import {Octicons} from '@expo/vector-icons'
-import { useNavigation } from '@react-navigation/native';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { SCREENS } from "../config";
+import { api } from "../server/api";
+import { useFocus } from "native-base/lib/typescript/components/primitives";
+import { useCallback, useState } from "react";
 
 export const Pools = () => {
 
   const [isLoading, setIsLoading] = useState(true);
-  const [pools, setPools] = useState<PoolCardPros[]>([])
+  const [pools, setPools] = useState<IPoolCardProps[]>([])
 
   const { navigate } = useNavigation();
   const toast = useToast();
+
+  async function fetchPools() {
+    
+    try {
+      setIsLoading(true)
+
+      const response = await api.get('/pools')
+      setPools(response.data.pools)
+    }
+
+    catch (e) {
+      console.log(e)
+
+      toast.show({
+        title: 'Não foi possível carregar os bolões',
+        placement: 'top',
+        bgColor: 'red.500'
+      })
+    }
+
+    finally { setIsLoading(false) }
+  }
 
 
   return (
