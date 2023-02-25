@@ -32,7 +32,10 @@ export function Find() {
 
       navigate(SCREENS.POOLS)
     
-    } catch (error) { console.log(error)
+    } catch (error) {
+
+      console.log(error)
+      
       toast.show({
         title: "Ocorreu um erro ao entrar no bolão",
         placement: "top",
@@ -57,7 +60,8 @@ export function Find() {
          return;
        }
 
-  } finally { setIsLoading(false) }
+    } finally { setIsLoading(false) }
+  }
 
     return (
         <VStack flex={1} bg="gray.900">
@@ -69,9 +73,15 @@ export function Find() {
                     seu código único  
                 </Heading>
 
-                <Input mb={2} placeholder="Qual o código do bolão?"/>
+                <Input 
+                  mb={2} 
+                  placeholder="Qual o código do bolão?"
+                  autoCaptalize = "characters"
+                  onChangeText={setCode}
+                />
 
-                <Button title="BUSCAR POR CÓDIGO"/>
+                <Button title="BUSCAR POR CÓDIGO" onPress={handleJoinPool}/>
+            
             </VStack>
         </VStack>
     )
