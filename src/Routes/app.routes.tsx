@@ -4,6 +4,7 @@ import { Platform } from "react-native";
 import { Find, New, Pools } from "../screens";
 import { PlusCircle, SoccerBall } from "phosphor-react-native";
 import { SCREENS } from "../config";
+import { Details } from "../screens/Details";
 
 const {Navigator, Screen} = createBottomTabNavigator();
 
@@ -28,6 +29,7 @@ export function AppRoutes() {
                 top: Platform.OS === 'android' ? -10 : 0
             }
         }}>
+
             <Screen name={SCREENS.NEW}
                 component={New}
                 options={{
@@ -35,6 +37,7 @@ export function AppRoutes() {
                     tabBarLabel: "Novo Bolão :D"
                 }}
             />
+
             <Screen name={SCREENS.POOLS}
                 component={Pools}
                 options={{
@@ -42,10 +45,17 @@ export function AppRoutes() {
                     tabBarLabel: "Meus Bolões :D"
                 }}
             />
+            
             <Screen name={SCREENS.FIND}
                 component={Find}
                 options={{tabBarButton: null}}
             />
+      
+            <Screen name = {SCREENS.DETAILS}
+                component={Details}
+                options={{tabBarButton: () => null}}
+            />
+
         </Navigator>
     )
 }
