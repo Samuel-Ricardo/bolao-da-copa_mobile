@@ -2,6 +2,8 @@ import { useNavigation } from "@react-navigation/native";
 import { Heading, useToast, VStack } from "native-base";
 import { useState } from "react";
 import { Button, Header, Input } from "../components";
+import { SCREENS } from "../config";
+import { api } from "../server/api";
 
 export function Find() {
 
@@ -10,6 +12,52 @@ export function Find() {
 
   const toast = useToast();
   const { navigate } = useNavigation();
+
+  async function handleJoinPool() {
+    try { setIsLoading(true)
+      
+      if(!code.trim()) toast.show({
+          title: 'Informe o código',
+          placement: 'top',
+          bgColor: 'red.500'
+        })
+      
+      await api.post('/pools/join', {code})
+      
+      toast.show({
+        title: "Entrou no bolão com sucesso!",
+        placement: "top",
+        bgColor: 'green.500'
+      })
+
+      navigate(SCREENS.POOLS)
+    
+    } catch (error) { console.log(error)
+      toast.show({
+        title: "Ocorreu um erro ao entrar no bolão",
+        placement: "top",
+        bgColor: 'green.500'
+      })
+
+      if(error.response?.data?.message === 'Pool not found.') {
+          toast.show({
+            title: 'Não foi possível encontrar o bolão',
+            placement: 'top',
+            bgColor: 'red.500'
+          });
+        return;
+      }
+
+       if(error.response?.data?.message === 'You already joined this poll.') {
+          toast.show({
+            title: 'Você já está nesse bolão',
+            placement: 'top',
+            bgColor: 'red.500'
+          });
+         return;
+       }
+
+  } finally { setIsLoading(false) }
 
     return (
         <VStack flex={1} bg="gray.900">
