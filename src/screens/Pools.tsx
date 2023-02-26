@@ -37,6 +37,7 @@ export const Pools = () => {
     finally { setIsLoading(false) }
   }
 
+  useFocusEffect(useCallback(() => {fetchPools()}, []))
 
   return (
     <VStack flex={1} bgColor="gray.900">
