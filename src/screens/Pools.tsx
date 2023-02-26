@@ -1,5 +1,5 @@
-import { Icon, VStack, useToast } from "native-base";
-import { Button, Header, IPoolCardProps } from "../components";
+import { FlatList, Icon, VStack, useToast } from "native-base";
+import { Button, EmptyPoolList, Header, IPoolCardProps, Loading, PoolCard } from "../components";
 import {Octicons} from '@expo/vector-icons'
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { SCREENS } from "../config";
@@ -48,5 +48,24 @@ export const Pools = () => {
                 onPress={() => useNavigation().navigate(SCREENS.FIND as never)}    
             />
         </VStack>
+
+        { isLoading? <Loading/> :
+
+          <FlatList
+            data={pools}
+            keyExtractor={item => item.id}
+            renderItem={({ item }) =>  (
+              <PoolCard
+                data={item}
+                onPress={() => navigate(SCREENS.DETAILS as never, { id: item.id } as never)}
+              />
+            )}
+            ListEmptyComponent={ <EmptyPoolList/> }
+            showsVerticalScrollIndicator={false}
+            _contentContainerStyle={{ pb:10 }}
+            px={5}
+          />
+        }
     </VStack>
   )
+}
