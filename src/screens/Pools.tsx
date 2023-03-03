@@ -46,7 +46,7 @@ export const Pools = () => {
             <Button 
                 title="BUSCAR BOLÃO POR CÓDIGO" 
                 leftIcon={<Icon as={Octicons} name="search" color="black" size='md'/>}
-                onPress={() => useNavigation().navigate(SCREENS.FIND as never)}    
+                onPress={() => navigate(SCREENS.FIND as never)}    
             />
         </VStack>
 
@@ -58,7 +58,7 @@ export const Pools = () => {
             renderItem={({ item }) =>  (
               <PoolCard
                 data={item}
-                onPress={() => navigate(SCREENS.DETAILS as never, { id: item.id } as never)}
+                onPress={() => navigate(SCREENS.DETAILS, { id: item.id })}
               />
             )}
             ListEmptyComponent={ <EmptyPoolList/> }

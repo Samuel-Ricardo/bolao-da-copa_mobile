@@ -66,7 +66,7 @@ export function Details () {
       { poolDetails._count?.participants > 0 ?
 
         <VStack px={5} flex={1}>
-          <PoolHeader data={poolDetails} />
+           {/* <PoolHeader data={poolDetails} /> */}
         
           <HStack bgColor="gray.900" p={1} rounded="sm" mb={8}>
             <Options

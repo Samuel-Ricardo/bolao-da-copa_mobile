@@ -13,7 +13,7 @@ export function EmptyPoolList() {
             </Text>
 
             <Pressable onPress={() => navigate(SCREENS.FIND as never)}>
-                <Text>
+                <Text textDecoration="underline" color="yellow.500">
                     Buscar um pelo código
                 </Text>
             </Pressable>

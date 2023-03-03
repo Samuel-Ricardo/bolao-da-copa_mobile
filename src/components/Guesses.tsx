@@ -4,6 +4,7 @@ import { api } from '../server/api';
 import { EmptyMyPoolList } from './EmptyMyPoolList';
 import { Game, IGameProps } from './Game';
 import { Loading } from './Loading';
+import { Error } from '../utils';
 
 interface Props {
   poolId: string;
@@ -59,9 +60,7 @@ export function Guesses({poolId, code}: Props) {
             });
 
             fetchGames();
-        } catch(err) {
-            console.log(err);
-
+        } catch(err) { Error(err);
             toast.show({
                 title: 'Não foi possível enviar o palpite',
                 placement: 'top',

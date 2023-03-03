@@ -1,5 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
-import { Heading, useToast, VStack } from "native-base";
+import { Heading, useToast, VStack, Card, Text } from 'native-base';
 import { useState } from "react";
 import { Button, Header, Input } from "../components";
 import { SCREENS } from "../config";
@@ -39,7 +39,7 @@ export function Find() {
       toast.show({
         title: "Ocorreu um erro ao entrar no bolão",
         placement: "top",
-        bgColor: 'green.500'
+        bgColor: 'red.500'
       })
 
       if(error.response?.data?.message === 'Pool not found.') {
@@ -68,10 +68,12 @@ export function Find() {
             <Header title="Buscar por código" showBackButton/>
 
             <VStack mt={8} mx={5} alignItems="center">
-                <Heading fontFamily="heading" color="white" fontSize="x1" mb={8} textAlign="center">
+                <Card fontFamily="heading" color="white" fontSize="x1" mb={8} textAlign="center">
+                    <Text color="white">
                     Encontre um bolão através de{'\n'}
                     seu código único  
-                </Heading>
+                    </Text>  
+                </Card>
 
                 <Input 
                   mb={2} 
