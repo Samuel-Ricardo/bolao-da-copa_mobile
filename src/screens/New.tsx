@@ -1,4 +1,4 @@
-import { Heading, Text, useToast, VStack } from "native-base";
+import { Card, Heading, Text, useToast, VStack } from "native-base";
 import { Button, Header, Input } from "../components";
 import Logo from '../assets/logo.svg'
 import { useState } from 'react'
@@ -50,10 +50,12 @@ export function New() {
             <Header title='Criar novo bolão'/>
             <VStack mt={8} mx={5} alignItems='center'>
                 <Logo/>
-                <Heading fontFamily="heading" color="white" fontSize="x1" my={8} textAlign="center">
+                <Card fontFamily="heading" color="white" fontSize="x1" my={8} textAlign="center">
+                    <Text color={"white"}>
                     Crie seu próprio bolão da copa{'\n'}
                     e compartilhe entre amigos!
-                </Heading>
+                    </Text>
+                </Card>
 
                 <Input 
                   mb={2} 

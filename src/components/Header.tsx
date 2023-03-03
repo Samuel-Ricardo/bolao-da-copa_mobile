@@ -8,7 +8,7 @@ interface IProps {
     title: string;
     showBackButton?: boolean;
     showShareButton?: boolean;
-    onShare: () => void;
+    onShare?: () => void;
 }
 
 export function Header(

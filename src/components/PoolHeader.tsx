@@ -2,7 +2,11 @@ import { Heading, HStack, VStack, Text } from "native-base";
 import { Participants } from "./Participants";
 import { IPoolCardProps } from "./PoolCard";
 
-export const PoolHeader = (data:IPoolCardProps) => (
+interface IProps{
+    data:IPoolCardProps
+}
+
+export const PoolHeader = ({ data }: IProps) => (
     <HStack
         w='full'
         h={20}

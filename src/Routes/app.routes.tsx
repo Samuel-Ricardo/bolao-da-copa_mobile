@@ -48,7 +48,7 @@ export function AppRoutes() {
             
             <Screen name={SCREENS.FIND}
                 component={Find}
-                options={{tabBarButton: null}}
+                options={{tabBarButton: () => null}}
             />
       
             <Screen name = {SCREENS.DETAILS}
