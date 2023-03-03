@@ -4,7 +4,11 @@ import * as Google from 'expo-auth-session/providers/google'
 import * as AuthSessions from 'expo-auth-session'
 import {GOOGLE_CLIENT_ID} from '@env'
 import { api } from '../server/api';
+import { Error } from '../utils';
+import { BASE_URL } from '@env';
+import Constants from "expo-constants";
 
+const { manifest } = Constants;
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -34,13 +38,10 @@ export function AuthContextProvider({children}) {
         scopes: ['profile', 'email']
     });
 
-    
-
     async function signIn() {
         try {
             setIsUserloading(true)
             await promptAsync();
-            
         } catch(err) {
             console.error(err);
             throw err;
@@ -49,19 +50,22 @@ export function AuthContextProvider({children}) {
         }
     }
 
+
     async function signInWithGoogle(access_token: string) {
         console.log('TOKEN DE AUTENTICAÇÃO ====>', access_token);
 
-        try { setIsUserloading(true)
+         try { setIsUserloading(true)
             
             const token = (await api.post('/users', {access_token})).data.token;
-
+            
             api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
-            setUser((await api.get(`/me`)).data);
-        
+            console.log((await api.get(`/me`)).data.user);
+
+            setUser((await api.get(`/me`)).data.user);
         }
-         catch(err) { throw err }
+
+         catch(err) { Error(err) }
          finally{ setIsUserloading(false) }
     }
 

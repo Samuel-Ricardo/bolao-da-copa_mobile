@@ -1,4 +1,4 @@
-import { Box, Text } from "native-base";
+import { Box } from "native-base";
 import { NavigationContainer } from "@react-navigation/native";
 
 import { useAuth } from "../hooks/useAuth";
