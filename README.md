@@ -72,3 +72,36 @@
 
 #
 
+<h2 id="techs">
+  💻 | Technologies:  
+</h2>
+
+  > <a href='https://docs.expo.dev/'> <img width='40px' src='./readme_files/client.svg'> </a>
+
+  <br>
+
+<p> - Google APIs           </p>
+<p> - Google Auth           </p>
+<p> - Google Fonts          </p>
+<p> - JavaScript            </p>  
+<p> - TypeScript            </p>
+<p> - NodeJS                </p>
+<p> - Expo                  </p>
+<p> - ReactNative           </p>
+<p> - Reac Navigation       </p>
+<p> - Native Base           </p>
+<p> - Phosphor React Native </p>
+<p> - React Hooks           </p>
+<p> - Context API           </p>
+<p> - eas                   </p>
+<p> - vector-icons          </p>
+<p> - JWT                   </p>
+<p> - Axios                 </p>
+<p> - SVG Handlings         </p>
+<p> - .env variables        </p>
+
+<br>
+> Among Others...
+
+#
+
