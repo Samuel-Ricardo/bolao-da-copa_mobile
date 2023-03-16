@@ -105,3 +105,39 @@
 
 #
 
+<h2 id="run-project"> 
+   👨‍💻 | How to use
+</h2>
+
+### Open your Git Terminal and clone this repository
+
+```git
+  $ git clone "git@github.com:Samuel-Ricardo/bolao-da-copa_mobile.git"
+```
+
+### Make Pull
+
+```git
+  $ git pull "git@github.com:Samuel-Ricardo/bolao-da-copa_mobile.git"
+```
+
+
+You need to have `NodeJS` on your machine and a package manager (`npm`, `yarn`, or other...) to interpret the code and install the dependecies.
+
+> <a target="_blank" href="https://nodejs.org/en/"> <img width="48px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" /> </a>
+
+
+```bash
+  
+  # To install all the dependencies 
+  $ yarn  
+  $ npm install
+
+  # To run the project
+  $ yarn run dev
+  $ npm run dev
+
+```
+
+#
+
