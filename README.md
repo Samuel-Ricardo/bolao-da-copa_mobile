@@ -139,7 +139,7 @@ You need to have `NodeJS` on your machine and a package manager (`npm`, `yarn`, 
 
 ```
 
-#;
+#
 
 <h2 id="autor">
   :octocat: | Author:  
