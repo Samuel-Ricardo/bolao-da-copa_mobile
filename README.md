@@ -108,12 +108,12 @@
 #
 
 <h2 id="app">
- 📱 | Application  
+ [📱] - Application  
 </h2>
 
 
 <h3>
-  - Signin:
+  | Signin:
 </h3>
 
 <div align="center">
@@ -122,12 +122,13 @@
 </div>
 
 <p>
-  ...
+  Here you can Signin with a Google Account that is very easy, simple and fast, just essential data are colected like your name or perfil image :)
 </p>
 
+<br>
 
 <h3>
-  - Create
+  | Create
 </h3>
 
 <div align="center">
@@ -137,12 +138,14 @@
 </div>
 
 <p>
-  ...
+  Here you can create a betting group and share with your friends, have a null check and dont let you to create a gourp without a name.
 </p>
+
+<br>
 
 
 <h3>
-  - Search
+  | Search
 </h3>
 
 <div align="center">
@@ -151,11 +154,11 @@
 </div>
 
 <p>
-  ...
+  You can search the groups that you make part and get in a new group with her code on "Find" screen 
 </p>
 
 <h3>
-  - Play
+  | Play
 </h3>
 
 <div align="center">
@@ -164,7 +167,7 @@
 </div>
 
 <p>
-  ...
+  Now You can make your bets and see what happens, good luck! :D
 </p>
 
 
