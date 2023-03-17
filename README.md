@@ -62,7 +62,11 @@
 <img width="350pt" src="./readme_files/copa-signin.png"/>
 
 <p align="justfy">
-...
+  This app has as a target, allow the users create yours own betting groups and share with her friends. Uses Google Auth and JWT to login, signin and handler users sessions.
+</p>
+
+<p align="justfy">
+  The router system is maneged by react-navigator based on bottom-tabs, was created a auth Context with the useContext of React library to manage state and provide for all application data about user and auth. Uses Axios to comunicate with API. For app style was used the native-base that help to much. And was necessary handle the SVG images.   
 </p>
 
 #
@@ -103,6 +107,7 @@
 <p> - .env variables        </p>
 
 <br>
+
 > Among Others...
 
 #
