@@ -154,6 +154,20 @@
   ...
 </p>
 
+<h3>
+  - Play
+</h3>
+
+<div align="center">
+  <img width="350pt" src="./readme_files/guess.png" />
+  <img width="350pt" src="./readme_files/bet.png" />
+<div>
+
+<p>
+  ...
+</p>
+
+
 
 
 #
