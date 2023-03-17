@@ -62,11 +62,11 @@
 <img width="350pt" src="./readme_files/copa-signin.png"/>
 
 <p align="justfy">
-  This app has as a target, allow the users create yours own betting groups and share with her friends. Uses Google Auth and JWT to login, signin and handler users sessions. Create, share and have fun  with the betting groups, good lucky :D
+  This app aims to allow users to create their own guess groups and share with their friends. Uses Google Auth and JWT to login, sign in and handle user sessions. Create, share and have fun with guess groups, good luck :D 
 </p>
 
 <p align="justfy">
-  The router system is maneged by react-navigator based on bottom-tabs, was created a auth Context with the useContext of React library to manage state and provide for all application data about user and auth. Uses Axios to comunicate with API. For app style was used the native-base that help to much. And was necessary handle the SVG images.   
+  The routing system is managed by react-navigator based on the bottom tabs, an authentication context has been created with useContext from the React library to manage the state and provide all the data to the application layers about user and authentication. Uses Axios to communicate with the API. Native-base was used for the application style which helps a lot. And it was necessary to deal with the SVG images.
 </p>
 
 #
@@ -126,7 +126,7 @@
   <img width="350pt" src="./readme_files/copa_signin_google.png" />
 </div>
 
-<p>
+<p align="justfy">
   Here you can Signin with a Google Account that is very easy, simple and fast, just essential data are colected like your name or perfil image :)
 </p>
 
@@ -142,8 +142,8 @@
   <img width="350pt" src="./readme_files/create-bad.png"/>
 </div>
 
-<p>
-  Here you can create a betting group and share with your friends, have a null check and dont let you to create a gourp without a name.
+<p align="justfy">
+  Here you can create a guess group and share with your friends, have a null check that not allow you to create an unnamed group.
 </p>
 
 <br>
@@ -158,7 +158,7 @@
   <img width="350pt" src="./readme_files/find.png" />
 </div>
 
-<p>
+<p align="justfy">
   You can search the groups that you make part and get in a new group with her code on "Find" screen 
 </p>
 
@@ -171,8 +171,8 @@
   <img width="350pt" src="./readme_files/bet.png" />
 </div>
 
-<p>
-  Now You can make your bets and see what happens, good luck! :D
+<p align="justfy">
+  Now You can make your guesses and see what happens, good luck! :D
 </p>
 
 
