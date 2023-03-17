@@ -62,7 +62,7 @@
 <img width="350pt" src="./readme_files/copa-signin.png"/>
 
 <p align="justfy">
-  This app has as a target, allow the users create yours own betting groups and share with her friends. Uses Google Auth and JWT to login, signin and handler users sessions.
+  This app has as a target, allow the users create yours own betting groups and share with her friends. Uses Google Auth and JWT to login, signin and handler users sessions. Create, share and have with the betting groups, good lucky :D
 </p>
 
 <p align="justfy">
