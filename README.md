@@ -26,7 +26,7 @@
   |&nbsp;&nbsp;
   <a style="color: #8a4af3;" href="#project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a style="color: #8a4af3;" href="#techs">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a style="color: #8a4af3;" href="#routes">Routes</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a style="color: #8a4af3;" href="#app">App</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
   <a style="color: #8a4af3;" href="#run-project">Run</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
   <a style="color: #8a4af3;" href="#author">Author</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
@@ -58,6 +58,8 @@
 <p id="project"/>
 
 <h2>  | :artificial_satellite: About:  </h2>
+
+<img width="350pt" src="./readme_files/copa-signin.png"/>
 
 <p align="justfy">
 ...
@@ -105,6 +107,39 @@
 
 #
 
+<h2 id="app">
+ 📱 | Application  
+</h2>
+
+<h3>
+  - Signin:
+</h3>
+
+<div align="center">
+  <img width="350pt" src="./readme_files/copa-signin.png" />
+  <img width="350pt" src="./readme_files/copa_signin_google.png" />
+<div>
+
+<p>
+  ...
+</p>
+
+<h3>
+  - Create
+</h3>
+
+<div align="center">
+  <img width="350pt" src="./readme_files/create.png" />
+  <img width="350pt" src="./readme_files/create-good.png" />
+  <img width="350pt" src="./readme_files/create-bad.png"/>
+<div>
+
+<p>
+  ...
+</p>
+
+
+#
 <h2 id="run-project"> 
    👨‍💻 | How to use
 </h2>
