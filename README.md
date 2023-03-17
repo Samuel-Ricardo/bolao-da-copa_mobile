@@ -71,7 +71,7 @@
 
 #
 
- - APK: ...
+ - APK: <a style="color: #8a4af3;" href="./APP/bolao_da_copa.apk"> Bolão da Copa </a>
  - Repo: [Front-end] - <a style="color: #8a4af3;" href="https://github.com/Samuel-Ricardo/bolao-da-copa">Bolão Da Copa - [Landing Page]</a>
  - Repo: [API] - <a style="color: #8a4af3;" href="https://github.com/Samuel-Ricardo/bolao-da-copa_api">Bolão Da Copa - [API]</a>
  - Current Version <b> 1.0.0 </b>
