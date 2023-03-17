@@ -119,7 +119,7 @@
 <div align="center">
   <img width="350pt" src="./readme_files/copa-signin.png" />
   <img width="350pt" src="./readme_files/copa_signin_google.png" />
-<div>
+</div>
 
 <p>
   ...
@@ -134,7 +134,7 @@
   <img width="350pt" src="./readme_files/create.png" />
   <img width="350pt" src="./readme_files/create-good.png" />
   <img width="350pt" src="./readme_files/create-bad.png"/>
-<div>
+</div>
 
 <p>
   ...
@@ -148,7 +148,7 @@
 <div align="center">
   <img width="350pt" src="./readme_files/list.png" />
   <img width="350pt" src="./readme_files/find.png" />
-<div>
+</div>
 
 <p>
   ...
@@ -161,7 +161,7 @@
 <div align="center">
   <img width="350pt" src="./readme_files/guess.png" />
   <img width="350pt" src="./readme_files/bet.png" />
-<div>
+</div>
 
 <p>
   ...
