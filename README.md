@@ -43,11 +43,11 @@
     <img src='https://img.shields.io/static/v1?label=&message=Samuel.ex&color=black&style=for-the-badge&logo=instagram'/> 
   </a>
 
-  <a target="_blank" herf='https://www.linkedin.com/in/samuel-ricardo-cabral/'>
+  <a target="_blank" herf='https://www.linkedin.com/in/samuel-ricardo/'>
     <img src='https://img.shields.io/static/v1?label=&message=Samuel%20Ricardo&color=black&style=for-the-badge&logo=LinkedIn'/> 
   </a>
 
-  <a target="_blank" herf='https://www.linkedin.com/in/samuel-ricardo-cabral/'>
+  <a target="_blank" herf='https://www.linkedin.com/in/samuel-ricardo/'>
     <img width="64px" src='https://seeklogo.com/images/R/rocketseat-logo-666CE4B396-seeklogo.com.png'/> 
   </a>
 
@@ -219,7 +219,7 @@ You need to have `NodeJS` on your machine and a package manager (`npm`, `yarn`, 
   :octocat: | Author:  
 </h2>
 
-> <a target="_blank" href="https://www.linkedin.com/in/samuel-ricardo-cabral/"> <img width="350px" src="https://github.com/Samuel-Ricardo/bolao-da-copa/raw/main/readme_files/IMG_20220904_220148_188.jpg"/> <br> <p> <b> - Samuel Ricardo</b> </p></a>
+> <a target="_blank" href="https://www.linkedin.com/in/samuel-ricardo/"> <img width="350px" src="https://github.com/Samuel-Ricardo/bolao-da-copa/raw/main/readme_files/IMG_20220904_220148_188.jpg"/> <br> <p> <b> - Samuel Ricardo</b> </p></a>
 
 <h1>
   <a herf='https://github.com/Samuel-Ricardo'>
@@ -234,7 +234,7 @@ You need to have `NodeJS` on your machine and a package manager (`npm`, `yarn`, 
     <img src='https://img.shields.io/static/v1?label=&message=Samuel%20Ricardo&color=black&style=for-the-badge&logo=twitter'> 
   </a>
   
-   <a herf='https://www.linkedin.com/in/samuel-ricardo-cabral/'>
+   <a herf='https://www.linkedin.com/in/samuel-ricardo/'>
     <img src='https://img.shields.io/static/v1?label=&message=Samuel%20Ricardo&color=black&style=for-the-badge&logo=LinkedIn'> 
   </a>
 </h1>
